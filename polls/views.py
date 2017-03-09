@@ -13,13 +13,13 @@ class IndexView(generic.ListView):
         return Question.objects.order_by('-pub_date')[:5]
     #latest_question_list=Question.objects.order_by('pub_date')[:5]
     #context={'latest_question_list': latest_question_list}
-    #return render(request,'polls/index.html',context) 
+    #return render(request,'polls/index.html',context)
 
 class DetailView(generic.DetailView):
     model=Question
     template_name = 'polls/detail.html'
 
-class ResultView(generic.DetailView):
+class ResultsView(generic.DetailView):
     model=Question
     template_name = 'polls/results.html'
 
